@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Книжный клуб «Вечерняя страница»</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="auth.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <p class="brand">Вечерняя страница</p>
+      <nav aria-label="Основная навигация">
+        <a href="#topics">Что читаем</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h1>Читаем вместе и обсуждаем прочитанное</h1>
+      <p>Раз в две недели выбираем книгу, делимся впечатлениями и находим новых друзей по интересам.</p>
+      <a class="button" href="#topics">Посмотреть, что читаем</a>
+
+      <form id="greeting-form" class="join" novalidate>
+        <label for="visitor-name">Ваше имя</label>
+        <input id="visitor-name" type="text" maxlength="40" autocomplete="given-name">
+        <button class="button" type="submit">Поприветствовать</button>
+      </form>
+      <p id="greeting-output" role="status"></p>
+    </section>
+
+    <section id="topics">
+      <h2>Наши направления</h2>
+      <label for="category-filter">Категория тем</label>
+      <select id="category-filter">
+        <option value="all">Все темы</option>
+        <option value="layout">Вёрстка</option>
+        <option value="logic">Логика</option>
+      </select>
+      <p id="topic-count" role="status"></p>
+      <div id="topic-list" class="cards"></div>
+      <noscript>Для вывода тем включите JavaScript.</noscript>
+    </section>
+
+    <section id="contacts" class="contacts">
+      <h2>Как присоединиться</h2>
+      <p>Приходите в читальный зал, кабинет 112, по четвергам после занятий.</p>
+    </section>
+
+    <section id="account" class="auth">
+      <h2>Учебный вход</h2>
+      <p id="demo-note">Демонстрация без защиты данных.
+        Используйте только учебные данные: club / web123.</p>
+      <form id="login-form" novalidate aria-describedby="demo-note">
+        <label for="login">Логин</label>
+        <input id="login" type="text" required
+          autocomplete="username" maxlength="40">
+        <label for="password">Учебный пароль</label>
+        <input id="password" type="password" required
+          autocomplete="current-password" maxlength="80">
+        <button class="button" type="submit">Войти</button>
+      </form>
+      <p id="auth-message" role="status"></p>
+      <div id="account-panel" hidden>
+        <h3 id="account-title" tabindex="-1">Кабинет участника</h3>
+        <p id="account-greeting"></p>
+        <p>Здесь можно продолжить работу с темами клуба.</p>
+        <p>О проекте: это учебный сайт книжного клуба «Вечерняя страница» с четырьмя направлениями чтения и фильтром по категориям.</p>
+        <button id="logout-button" class="button" type="button">
+          Выйти
+        </button>
+      </div>
+      <noscript>Для учебного входа включите JavaScript.</noscript>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>Учебный проект, день 4. Автор: Алексей Тилинин.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+  background: #faf4ea;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.site-header { padding: 20px 0; background: #ffffff; }
+
+.brand { margin: 0 0 8px; font-weight: bold; }
+
+nav { display: flex; flex-wrap: wrap; gap: 16px; }
+
+a {color: #000000;}
+
+a:focus-visible { outline: 3px solid #1e0d01; outline-offset: 4px; }
+
+.intro { padding: 40px 0; }
+
+h1 { font-size: 36px; line-height: 1.2; margin: 0 0 16px; }
+
+h2 { font-size: 26px; }
+
+h3 { font-size: 21px; margin: 0 0 12px; }
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #999999;
+  color: #ffffff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.button:hover { background: #504d4b; }
+
+.card {
+  flex: 1;
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #e0cdb4;
+  border-radius: 12px;
+  background: #ffffff;
+  overflow-wrap: anywhere;
+}
+
+.card p { margin: 0; }
+
+.contacts { padding: 24px 0; }
+
+footer { padding: 16px 0 24px; }
+
+.cards {
+  display: flex;
+  gap: 16px;
+}
+
+@media (max-width: 700px) {
+  .cards { flex-direction: column; }
+  h1 { font-size: 28px; }
+}
+.join { padding: 24px 0; }
+.join label { display: block; margin-bottom: 8px; }
+.join input {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #64748b;
+  border-radius: 8px;
+  font: inherit;
+}
+button { font: inherit; border: 0; cursor: pointer; }
+button:focus-visible {
+  outline: 3px solid #172033;
+  outline-offset: 4px;
+}
+#message, #greeting-output { min-height: 3em; overflow-wrap: anywhere; }
+
+/* Третий день: перенос карточек и фильтр */
+.cards { flex-wrap: wrap; }
+
+.card { flex: 1 1 240px; }
+
+select { font: inherit; padding: 10px; max-width: 100%; }
+
+#topics label { margin-right: 8px; }
+
+#topic-count { min-height: 1.5em; }
+
+@media (max-width: 700px) { .card { flex: auto; } }
+
+/* Четвёртый день: учебный вход */
+.auth { padding: 24px 0; }
+
+.auth label { display: block; margin: 12px 0 6px; }
+
+.auth input {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #64748b;
+  border-radius: 8px;
+  font: inherit;
+}
+
+#auth-message { min-height: 1.5em; overflow-wrap: anywhere; }
+
+#account-title:focus { outline: 3px solid #172033; outline-offset: 4px; }
+
+[hidden] { display: none !important; }
+
+input:focus-visible,
+select:focus-visible,
+.join input:focus-visible,
+.auth input:focus-visible {
+  outline: none;
+  border-color: #000000;
+}
